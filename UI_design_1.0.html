@@ -1,0 +1,94 @@
+
+<!-- {%load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cluster Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style_sheet-1.0.css">
+</head>
+<body>
+<div  class="header_field">
+  <header>
+    <div class="container_h">
+      <h2>Cluster Analysis</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Demo</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+   </header> 
+
+    <section class="hero">
+      <div class="container_hero">
+        <h2>Simplify Data Clustering with Our K-Means Analysis Tool</h2>
+        <p>Start Analyzing Now</p>
+      </div>
+    </section></div><div class="upload_data">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Import Your Data With Ease</h1>
+            <p>Simply upload your CSV file and choose your clustering columns. Our tool does the complicated clustering process behind the scenes, providing visualizations and results you can easily understand.</p>
+            <form action="" enctype="multipart/form-data" method="POST">
+              <!-- {% csrf_token %} -->
+              <input name="dataset" type="file"/>
+              <input name ="btn1" type="submit" />
+          </form>
+            <!-- <button type="button" class="btn btn-primary">Upload Your Data</button> -->
+          </div>
+          <div class="col-md-6">
+            <div class="dataset_details">
+                <p>Features in the given dataset will be displayed here </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+             <div class="col-md-6">
+              <div class="elbow_image">
+              <img src="import-data.png" alt="A person uploading a CSV file to the clustering tool">
+            </div>
+          </div>
+            <div class="col-md-6">
+              <h1>Visualize The Perfect Clustering Solution </h1>
+              <p>Our tool generates an elbow curve to let you determine the optimal number of clusters. This visualization simplifies the process, delivering precise algorithmic interpretations. </p>
+              <button type="button" class="btn btn-primary">Generate Elbow Curve</button>
+            </div>
+           
+        </div>
+    </div>
+
+
+    <div class="result">
+     
+        Final clustering result will be displayed here
+
+    </div>
+
+    <div class="content">
+        <div class="form">
+          <h2>Contact us</h2>
+          <form action="/action_page.php">
+            <label for="fullname">Full name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+            <label for="phone">Phone number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="submit" value="Send message">
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Copyright 2023 Cluster Analysis</p>
+      </div>
+
+    
+ 
+</body>
+</html>
