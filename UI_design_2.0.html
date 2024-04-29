@@ -1,0 +1,191 @@
+
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cluster Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'style_sheet-1.0.css' %}">
+</head>
+<body>
+<div  class="header_field">
+  <header>
+    <div class="container_h">
+      <h2>Cluster Analysis</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#demo">Demo</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+   </header> 
+
+    <section class="hero">
+      <div class="container_hero">
+        <h2>Simplify Data Clustering with Our K-Means Analysis Tool</h2>
+
+        <form action="" enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          <input name ="btn3" value="Start Analyzing Now"  type="submit"/>
+        </form>
+    
+      </div>
+    </section></div><div class="upload_data" id="demo">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Import Your Data With Ease</h1>
+            <p>Simply upload your CSV file and choose your clustering columns. Our tool does the complicated clustering process behind the scenes, providing visualizations and results you can easily understand.</p>
+            <form action="" enctype="multipart/form-data" method="POST">
+              {% csrf_token %}
+              <input name="dataset" type="file"/>
+              <input name ="btn" type="submit" value="Get Features" />
+          </form>
+            <!-- <button type="button" class="btn btn-primary">Upload Your Data</button> -->
+          </div>
+          <div class="col-md-6">
+            <div class="dataset_details">
+              <h2>Dataset Features:</h2>
+              {% if features %}
+                {% for item in features %}
+                <li>{{ item }}</li>
+                {% endfor %}
+
+              {% else %}
+                <p>Features in the given dataset will be displayed here </p>
+              {% endif %}
+              </div>
+        </div>
+        </div>
+
+        <div class="row">
+             <div class="col-md-6">
+              <div class="elbow_image">
+                {% if img1 %}
+                <h1>Elbow Curve</h1>
+                <img src="{% static 'elbow-curve.png' %}">
+                {% else %}
+                <h1>Elbow curve will be render here...</h1>
+                {% endif %}
+            </div>
+          </div>
+            <div class="col-md-6">
+              <h1>Visualize The Perfect Clustering Solution </h1>
+              <p>Our tool generates an elbow curve to let you determine the optimal number of clusters. This visualization simplifies the process, delivering precise algorithmic interpretations. </p>
+              <form action="" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <label for ='y'>Y-axis</label>
+                <select name="yaxis" id="y">
+                  {%if features %}
+                  {%for i in range %}
+                  <option value="{{i}}">{{i}}</option>
+                  {%endfor%}
+                  {%else%}
+                  <option value="0">0</option>
+                  {% endif %}
+                </select>
+                <label for="x" >X-axis</label>
+                <select name="xaxis" id="x">
+                  {%if features %}
+                  {%for i in range %}
+                  <option value="{{i}}">{{i}}</option>
+                  {%endfor%}
+                  {%else%}
+                  <option value="0">0</option>
+                  {% endif %}
+                </select>
+                <input name ="btn1" type="submit" value="Generate Elbow Curve" />
+            </form>
+              <!-- <button type="button" class="btn btn-primary">Generate Elbow Curve</button> -->
+            </div>
+           
+        </div>
+    </div>
+
+    
+  <div class="cluster-heading">
+    <p>"Get Final Clusters At the Click of a Button 
+
+      Simply feed the number, get the clusters. " <p>
+  </div>
+  <div class="centroids-input">
+  <form action="" enctype="multipart/form-data" method="POST">
+      {% csrf_token %}
+      <h3>Enter number of centroids:</h3>
+      
+<input type="text" name="centroids" class="input" placeholder="Type your text">
+    <br>  <input name ="btn2" type="submit" value="Get Your Clusters"/>
+  </form>
+</div>
+    <div class="result">
+     
+      {% if img2 %}
+      <h1>Final clusters</h1>
+      <img src="{% static 'clusters.png' %}">
+      {% else %}
+      <h1>Final Clusters will be displayed here...</h1>
+      {% endif %}
+    </div>
+    <!-- Add this section at the end of your webpage -->
+
+<div class="ai-insights-section">
+  <form action="http://127.0.0.1:7860/" method="POST" target="_blank">
+      {% csrf_token %}
+      <p>"Discover dynamic insights and unlock marketing strategies with our AI-powered analysis of clusters."</p>
+      <br>
+      <button class="ai-button" type="submit">Get AI Insights</button>
+  </form>
+</div>
+<div id="contact-section">
+    <form class="form" >
+      <div class="title">Contact us</div>
+      <input type="text" placeholder="Your email" class="input">
+      <textarea placeholder="Your message"></textarea>
+       
+      <button>Submit</button>
+    </form>
+</div>   
+      <div class="footer">
+        <p>Privacy Policy | Terms of Service</p>
+      </div>
+
+      <!-- <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <h3>Connect with Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: example@example.com</p>
+                </div>
+            </div>
+            <div class="legal-info">
+                <p>Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer> -->
+
+    
+ 
+</body>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+</html>

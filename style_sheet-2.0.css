@@ -1,0 +1,438 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  .header_field {
+   background-image: url(hero.png);
+   background-attachment: fixed;
+   background-size:cover;
+   background-position: center;
+   padding: 0px;
+   
+  }
+  header {
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 45px;
+  }
+  
+  .container_h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container_hero{
+    align-items: initial;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 40px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .container_hero input[type=submit]{
+    background-color: #FF4500;  
+    color: #fff;  
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;  
+    cursor: pointer;
+    transition: background-color 0.3s;  
+}
+.container_hero input[type=submit]:hover {
+  background-color: #FF6347;  /* Darker shade for hover effect */
+}
+  
+  .hero {
+    
+    color: #fff;
+    text-align: left;
+    padding: 130px;
+  }
+  
+  .hero h2 {
+    font-size: 82px;
+    
+    
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+  
+.upload_data{
+    margin-top: 0px;
+    height: auto;
+    background-color: #ebc10733;
+    
+}
+/*----------------------------------------*/
+input[type="file"] {
+  position: relative;
+}
+
+input[type="file"]::file-selector-button {
+  width: 136px;
+  color: transparent;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  left: 16px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+input[type="file"]::after {
+  position: absolute;
+  pointer-events: none;
+  top: 11px;
+  left: 40px;
+  color: #0964b0;
+  content: "Upload File";
+}
+
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #b4bfd4;
+}
+
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+/*------------------------*/
+.dataset_details {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.dataset-details h2 {
+  color: #333; /* Dark text color */
+}
+.dataset_details li {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: background-color 0.3s;
+}
+
+.dataset_details li:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+}
+
+.btn {
+    background-color: #186c1b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px ;
+  }
+  
+  .col-md-6 {
+    flex: 1 1 50%;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+  }
+  .col-md-6 input[type=submit]{
+    background-color: #186c1b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .dataset_details{
+    background-color: white;
+    height: 340px;
+    width: 90%;
+    font-size: 15px;
+    font-style: bold;
+    
+  }
+  .elbow_image{
+    background-color: white;
+    height: 340px;
+    width: 90%;
+    overflow: auto;
+    box-sizing: border-box;
+    
+    
+
+  }
+  .elbow_image img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .cluster-heading{
+
+    text-align: center;
+    font-size: 50px;
+    font-style: bold;
+    width: 50%;
+    margin: 0 auto;
+    
+  }
+  .input {
+    background-color: #383838;
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: #383838;
+    word-wrap: break-word;
+    outline: 7px solid #383838;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    max-width: 190px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+   }
+   
+   .input:hover {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+   }
+   
+   .input:focus {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+   }
+   .centroids-input {
+    text-align: center;
+}
+
+.centroids-input form {
+    display: inline-block;
+}
+
+.input {
+    margin-bottom: 10px; /* Add some distance between the input and the button */
+}
+   .centroids-input input[type=submit]{
+    background-color: #186c1b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .result{
+    margin-top: 50px;
+    text-align: center;
+    height: 500px;
+    border: 2px solid #333;
+    overflow: auto;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  .result img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .form {
+    
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px ;
+    background-color: #bce5dd;
+     }
+  
+  .form .title {
+    color: royalblue;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form input {
+    outline: 0;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 8px 14px;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .form textarea {
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 8px 14px;
+    border: 1px solid rgb(219, 213, 213);
+  }
+  
+  .form button {
+    align-self: flex-end;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+  }
+   
+  /* Add this to your existing CSS or create a new style block */
+
+.ai-insights-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ai-insights-section p {
+  text-align: center;
+    font-size: 50px;
+    font-style: bold;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.ai-button {
+  background-color: #007BFF; /* Blue color */
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.ai-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+  
+  
+  /* Footer styles */
+  
+  .footer {
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+
+   /* Reset default margin and padding */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media, .contact-info {
+  flex: 1;
+}
+
+.social-media ul {
+  list-style-type: none;
+}
+
+.social-media ul li {
+  margin-bottom: 10px;
+}
+
+.social-media ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legal-info {
+  text-align: center;
+  margin-top: 20px;
+} */
+
+  /* Add more styles as needed for the rest of your content */
+  
+ 
+  
+  
+ 
+  
+  
+  
+  
+ 
+
+
+  
